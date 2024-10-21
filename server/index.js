@@ -12,6 +12,8 @@ app.use(express.json())
 app.use(cors({
     //si deseo que solo se conecte este
     origin:FRONT_END_URL,
+    methods: ['GET','POST','PUT','DELETE'],
+    credentials: true,
 }))
 
 app.use(express.static(join(__dirname,'../client/dist')))
