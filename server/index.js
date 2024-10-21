@@ -11,7 +11,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 app.use(express.json())
 app.use(cors({
     //si deseo que solo se conecte este
-    origin:FRONT_END_URL
+    origin:FRONT_END_URL,
 }))
 
 app.use(express.static(join(__dirname,'../client/dist')))
