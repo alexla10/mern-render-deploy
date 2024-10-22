@@ -8,13 +8,7 @@ export const createTaksRequest = async (task) => {
 }
 
 export const getTasksRequest = async () => {
-     try {
-        const response = await axios.get(URL);
-        return response.data; // Asegúrate de devolver solo los datos
-    } catch (error) {
-        console.error("Error al obtener las tareas:", error);
-        throw error; // Re-lanza el error para que pueda ser manejado en otro lugar si es necesario
-    }
+   return await axios.get(`${URL}`)
 };
 
 export const deleteTasksRequest = async (id) => {
