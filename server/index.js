@@ -17,8 +17,8 @@ app.use(cors({
 
 app.use(router)
 
-app.use(express.static(join(__dirname,'../client/dist')))
 const __dirname = dirname(fileURLToPath(import.meta.url)) 
+app.use(express.static(join(__dirname,'../client/dist')))
 
 app.listen(PORT, ()=>{
     console.log("hola mundo");
