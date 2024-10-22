@@ -3,6 +3,7 @@ import { prisma } from "../db/conexion.js";
 export const getTasks = async (req,res) => {
     try {
         const tasks = await prisma.tasks.findMany()
+        console.log(req.url)
         res.json(tasks)
     } catch (error) {
         return res.status(500).json({message: error.message})
