@@ -3,8 +3,7 @@ import axios from 'axios'
 //const URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:4000/tasks";
 
 const axiosInstance = axios.create({
-    baseURL: import.meta.env.VITE_BACKEND_URL || "http://localhost:4000", // URL base
-    timeout: 1000, // Tiempo de espera en milisegundos
+    baseURL: import.meta.env.VITE_BACKEND_URL || "http://localhost:4000", // URL base // Tiempo de espera en milisegundos
     headers: {
         'Content-Type': 'application/json',
         // Puedes agregar otros encabezados aquí
